@@ -1,0 +1,1 @@
+SentCTF{y0u_str1ked_jackp0t}

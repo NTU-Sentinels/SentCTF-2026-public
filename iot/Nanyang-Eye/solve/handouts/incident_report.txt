@@ -1,0 +1,27 @@
+================================================================================
+  NTU SOC — INCIDENT REPORT (DECLASSIFIED FOR EXERCISE)
+  Ref: NANYANG-EYE-03 / PROJECT ORION
+================================================================================
+
+SOC recovered a busy maintenance capture from the network path used by a
+retired D-Link pan/tilt camera. The original device is no longer directly
+reachable. A restricted CCTV Operations Console has been provided for the
+final physical operation.
+
+Your objective is to separate ordinary network and video traffic from the
+legacy camera-management exchange, recover the maintenance protocol, and
+repair the supplied Python client. The capture contains routine camera,
+recorder and LAN activity; use protocol and request filters rather than manual
+packet browsing.
+
+Complete and dry-run the client on your own laptop before attending the
+physical Operations Console. The console starts at a normal terminal prompt
+with a fresh working copy of the client; no editor opens automatically. Use
+normal terminal tools if you need to reproduce your completed local work.
+
+The device does not use ONVIF in this scenario. Treat the observed legacy CGI
+form as the authoritative PTZ protocol. The physical D-Link administration
+network is out of scope; the supplied client reaches only an isolated gateway.
+
+-- SOC Watch, Blue Team Exercise Control
+================================================================================

@@ -1,0 +1,36 @@
+name: "Nanyang Eye"
+author: "Mujabeast"
+attribution: "Mujabeast"
+category: "IoT"
+description: |
+  At 02:13, NTU SOC captured traffic from NANYANG-EYE-03, a retired PTZ camera
+  that should have been offline.
+
+  The camera has been repurposed by a group calling itself ORION. A recovered
+  packet capture and damaged Python control client show that its maintenance
+  interface was used to redirect the camera from its normal view.
+
+  Analyse the evidence, recover the control details, and repair the supplied
+  client.
+
+  Your final operation must be performed at the Camera Bay organiser workstation.
+  Restore the camera's view and locate the flag.
+
+  Flag format: `sentctf{...}`
+
+value: 200
+type: standard
+
+flags:
+  - sentctf{0r10n_4l1gn3d}
+
+files:
+  - dist/project_orion.zip
+
+hints:
+  - content: "The capture contains both camera video traffic and a legacy maintenance request. Compare the protocols before focusing on individual packets."
+    cost: 0
+  - content: "The maintenance request is an HTTP POST. An Authorization header using the Basic scheme contains an encoding, not encryption."
+    cost: 25
+  - content: "The camera uses a D-Link-style relative PTZ form. Infer the missing direction value and form-building logic from the captured request before using the Camera Bay console."
+    cost: 50

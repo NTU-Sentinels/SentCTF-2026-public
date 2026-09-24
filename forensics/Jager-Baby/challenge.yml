@@ -1,0 +1,27 @@
+name: "Im Jager Baby!!!"
+author: "Justin"
+attribution: "Justin"
+category: "Forensics"
+description: |
+  A forensic investigator managed to retrieve a suspicious archive. Apparently, it is a photo of an operator from Rainbow 6 Siege. Are you able to find the secret buried within?
+
+  Flag format: `sentctf{...}`
+
+value: 200
+type: standard
+
+flags:
+  - sentctf{h1dden_iN_sTr3aMs}
+
+files:
+  - dist/challenge.rar
+
+hints:
+  - content: Maybe the skill of the operator will give you some clue?
+    cost: 0
+  - content: Have you tried unpacking it in a specific Drive?
+    cost: 25
+
+tags:
+  - NTFS
+  - ADS

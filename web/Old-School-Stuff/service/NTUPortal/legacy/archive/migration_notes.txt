@@ -1,0 +1,8 @@
+Migration Checklist
+===================
+
+✓ employees table migrated
+✓ users table migrated
+□ internal_notes table pending migration
+□ Remove legacy administrator account
+□ Delete backup credentials

@@ -1,0 +1,28 @@
+name: "Prime Suspects"
+author: "Mujabeast"
+attribution: "Mujabeast"
+category: "Crypto"
+description: |
+  An archived RSA message was stored together with its key-generation values.
+
+  Recover the plaintext and submit the flag.
+
+  Flag format: sentctf{...}
+
+value: 100
+type: standard
+state: hidden
+
+flags:
+  - sentctf{f4ct0r5_bu1ld_th3_k3y}
+
+files:
+  - dist/rsa_parameters.txt
+
+hints:
+  - content: "Use n = p * q and phi = (p - 1) * (q - 1)."
+    cost: 0
+  - content: "Python can calculate d with pow(e, -1, phi), then decrypt with pow(c, d, n)."
+    cost: 0
+
+next: "Prime Suspects: Part 2"

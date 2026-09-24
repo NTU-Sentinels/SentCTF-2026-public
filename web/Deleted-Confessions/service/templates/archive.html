@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Confession Archive{% endblock %}
+{% block content %}
+  <section class="page-heading">
+    <p class="eyebrow">ARCHIVE EXPORTS</p>
+    <h1>Available archive exports</h1>
+    <p>Public chat-log exports approved for release.</p>
+  </section>
+  <section class="panel archive-list">
+    {% for export in exports %}
+      <a href="{{ url_for('download_archive', file=export) }}">{{ export }}</a>
+    {% endfor %}
+  </section>
+{% endblock %}

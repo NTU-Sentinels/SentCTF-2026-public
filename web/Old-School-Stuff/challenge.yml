@@ -1,0 +1,27 @@
+name: Old School Stuff
+author: Rushaidy
+category: Web
+description: |-
+  NTU staff recently migrated to a new staff portal but forgot to properly decommission the old system. The legacy portal is still accessible online and appears to contain remnants of previous administrators, outdated resources, and forgotten internal pages. As part of a security assessment, your objective is to investigate the old portal and determine whether any sensitive information can still be accessed.
+
+  Flag format: `sentctf{...}`
+attribution: Rushaidy
+value: 200
+
+image: service
+connection_info: https://sentctf-old-school-stuff.chals.io
+
+flags:
+  - sentctf{all_r0ads_l3ad_t0_un10n}
+
+hints:
+  - content: I wonder what are the other directories present on the website?
+    cost: 0
+
+  - content: SQL Injection
+    cost: 50
+
+tags:
+  - Directory enumeration
+  - Source code inspection
+  - SQL query crafting

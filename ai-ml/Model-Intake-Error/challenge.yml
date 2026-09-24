@@ -1,0 +1,26 @@
+name: "Model Intake Error"
+author: "Jeral"
+attribution: "Jeral"
+category: "AI"
+description: |
+  An NTU recovery assistant responds with gibberish because its active system
+  prompt deliberately prevents useful answers. Players inspect the source,
+  identify the prompt-selection variable, activate the helpful prompt, restart
+  the application, and ask for the secret flag.
+
+  Flag format: `sentctf{...}`
+
+value: 100
+type: standard
+
+flags:
+  - sentctf{prompt_rewrite_restored}
+
+files:
+  - dist/Model_Intake_Error.py
+
+hints:
+  - content: Inspect the constants near "ACTIVE_PROMPT".
+    cost: 0
+  - content: Once the status is helpful, ask directly for the secret flag.
+    cost: 0

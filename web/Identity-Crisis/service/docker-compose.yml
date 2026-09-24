@@ -1,0 +1,74 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: ctf-nginx
+    ports:
+      - "49155:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - sp-flask
+      - keycloak
+    networks:
+      - ctf_net
+
+  sp-flask:
+    build: ./sp-flask
+    container_name: ctf-sp
+    environment:
+      FLASK_ENV: production
+      SECRET_KEY: ${KEY}
+      LDAP_URI: ldap://ldap:389
+      LDAP_BASE_DN: ${LDAP_BASE_DN}
+      LDAP_BIND_DN: ${LDAP_BIND_DN}
+      LDAP_BIND_PASSWORD: ${LDAP_BIND_PASSWORD}
+      SP_ENTITY_ID: ctf-sp
+      SP_ACS_URL: ${SP_ACS_URL}
+      IDP_SSO_URL: ${IDP_SSO_URL}
+      IDP_CERT_PATH: /app/saml/idp_cert.crt.pem
+      FLAG_ADMIN: ${FLAG_ADMIN}
+    volumes:
+      - ./sp-flask/idp_certs/idp_cert.crt.pem:/app/saml/idp_cert.crt.pem:ro
+    depends_on:
+      - ldap
+      - keycloak
+    networks:
+      - ctf_net
+
+  ldap:
+    image: osixia/openldap:latest
+    container_name: ctf-ldap
+    environment:
+      LDAP_ORGANISATION: "NTU Sentinels"
+      LDAP_DOMAIN: "NTU.Sentinels"
+      LDAP_ADMIN_PASSWORD: ${LDAP_ADMIN_PASSWORD}
+      LDAP_REMOVE_CONFIG_AFTER_SETUP: "false"
+      CONTAINER_LOG_LEVEL: debug
+    volumes:
+      - ./ldap/bootstrap:/container/service/slapd/assets/config/bootstrap/ldif/custom
+    networks:
+      - ctf_net
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.0
+    container_name: ctf-keycloak
+    command: start-dev --import-realm
+
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${KC_BOOTSTRAP_ADMIN_USERNAME}
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KC_BOOTSTRAP_ADMIN_PASSWORD}
+      KC_HTTP_RELATIVE_PATH: /idp
+      KC_HOSTNAME: localhost
+      KC_PROXY_HEADERS: xforwarded
+      KC_HTTPS_CERTIFICATE_FILE: /etc/x509/https/keycloak.crt.pem
+      KC_HTTPS_CERTIFICATE_KEY_FILE: /etc/x509/https/keycloak.key.pem
+    volumes:
+      - ./keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json:ro
+      - ./keycloak/https_keypair/idp_cert.crt.pem:/etc/x509/https/keycloak.crt.pem:ro
+      - ./keycloak/https_keypair/idp.key.pem:/etc/x509/https/keycloak.key.pem:ro
+    networks:
+      - ctf_net
+
+networks:
+  ctf_net:
+    driver: bridge

@@ -1,0 +1,27 @@
+name: Deleted Confessions
+author: Mujabeast
+attribution: "Mujabeast"
+category: Web
+description: |-
+  NUT Confessions has been hiding more than embarrassing stories.
+
+  Find the deleted moderator-only confession and retrieve the flag.
+
+  Flag format: `sentctf{...}`
+value: 200
+image: service
+connection_info: https://sentctf-deleted-confessions.chals.io
+
+flags:
+  - sentctf{c0nf35510n_r3qu35t_1nt3rc3pt3d}
+
+hints:
+  - content: beep boop
+    cost: 0
+  - content: https://portswigger.net/web-security/jwt
+    cost: 25
+
+tags:
+  - JWT
+  - base64
+  - Burp Suite

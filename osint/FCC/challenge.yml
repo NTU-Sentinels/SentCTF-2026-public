@@ -1,0 +1,34 @@
+name: "FCC"
+author: "Jarrettgxz"
+attribution: "Jarrettgxz"
+category: "OSINT"
+description: |
+  You are a cybersecurity student looking to learn more about IoT (Internet-of-Things) security testing (hacking). IoT refers to devices connected to the internet such as: routers, IP cameras, smart fridges, or even your mobile phones.
+
+  A good first step in IoT security research is to perform Open-Source Intelligence (OSINT) by gathering information about the target device through publicly available data found on the internet. This is useful to understand more about the target, even before you get your hands on the physical device. A common resource would be the Federal Communications Commission (FCC) pages: an agency that provides useful information about IoT devices
+
+  You recently found out that the Linksys E1200 v2 wireless router contains multiple unpatched vulnerabilities/security flaws. You found a fellow researcher named `jarrettgxz` who performed extensive research on this router model, and has published his work on various platforms.
+
+  Your goal for this challenge will be to perform OSINT on this router model, along with the related work this researcher have published. Refer to the `README.pdf` file provided to gather all the required portions to craft the final flag!
+
+  Remember, all the information you need can be found online!
+
+  Flag format: `sentctf{Qxx-xxxxx_BCMxxxx_CVE-xxxx-xxxxx_gxxxxxxxx_gxxxxxx_xxxxxxx}`
+
+value: 500
+type: standard
+
+files:
+  - dist/info.zip
+
+flags:
+  - sentctf{Q87-E1200V2_BCM5357_CVE-2025-60690_githubp0c_gitb0ok_d973da7}
+
+tags:
+  - IoT OSINT
+  - CVE research
+  - FCC pages
+
+hints:
+  - content: site:github.com releases e1200 v2.0.02
+    cost: 100

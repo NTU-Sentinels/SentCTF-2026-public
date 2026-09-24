@@ -1,0 +1,24 @@
+name: Cracking Firmware
+author: Jarrettgxz
+category: IoT (Internet-of-Things)
+description: |-
+  You have gained access to a firmware file from a router. A firmware is essentially the software portion of IoT devices such as routers. To solve this challenge, you have to extract the filesystem within the provided firmware using the `binwalk` tool, and read `flag.txt`.
+
+attribution: Jarrettgxz
+value: 100
+
+flags:
+  - sentctf{cr4ck1ng_f!rmw$re}
+
+files:
+  - dist/firmware.bin
+
+tags:
+  - firmware extraction
+  - Linux filesystem enumeration
+
+hints:
+  - content: binwalk --help | grep extract
+    cost: 5
+  - content: binwalk --extract firmware.bin
+    cost: 15

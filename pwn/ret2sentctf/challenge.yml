@@ -1,0 +1,34 @@
+name: ret2SentCTF
+author: Jarrettgxz
+category: Pwn
+description: |-
+  In this introductory stack buffer-overflow challenge, you will learn how to analyze
+  the vulnerability of a provided C source code to craft an exploit to hijack the
+  function call.
+
+   The offset between the vulnerable buffer and stored return address (`EIP` register) is `44` bytes. Your goal will be to overwrite the `EIP` register, and point it to the address of the `sentctf` function.
+
+   Do refer to the cheatsheet under the **pwn** section to understand how you can calculate this offset.
+
+  Flag format: `sentctf{...}` 
+
+  **2 methods to connect to challenge server**:
+    1. `nc cloud.chals.io 23`
+    - enter "sentctf-ret2sentctf.chals.io" 
+    
+    2. Connect via SSL client to: `sentctf-ret2sentctf.chals.io 443`
+
+attribution: Jarrettgxz
+value: 200
+
+image: service
+
+flags:
+  - sentctf{welc0me_to_st$ck_overflow$!}
+
+files:
+  - dist/ret2sentctf.zip
+
+tags:
+  - gdb
+  - pwntools

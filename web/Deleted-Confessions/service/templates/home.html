@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}NUT Confessions Live{% endblock %}
+{% block content %}
+  <section class="page-heading">
+    <p class="eyebrow">PUBLIC FEED</p>
+    <h1>NUT Confessions Live</h1>
+    <p>Anonymous thoughts from students who should probably be studying.</p>
+  </section>
+
+  <section class="feed" aria-label="Public confessions">
+    {% for author, post in posts %}
+      <article class="post">
+        <h2>{{ author }}</h2>
+        <p>{{ post }}</p>
+      </article>
+    {% endfor %}
+  </section>
+
+  <p class="system-note">Some posts may be automatically hidden by the moderation system.</p>
+{% endblock %}

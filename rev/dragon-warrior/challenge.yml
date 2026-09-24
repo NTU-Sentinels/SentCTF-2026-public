@@ -1,0 +1,27 @@
+name: "Dragon Warrior 1"
+author: "Mujabeast"
+attribution: "Mujabeast"
+category: "Rev"
+description: |
+  Sometimes the best way forward is to look within.
+
+  The Dragon Scroll is hidden somewhere inside this program. Prove that you are worthy and uncover its secret.
+
+  Provided file: `dragon_warrior_1`
+
+  Flag format: sentctf{...}
+
+value: 50
+type: standard
+state: hidden
+
+flags:
+  - sentctf{th3_dr4g0n_scr0ll}
+
+files:
+  - dist/dragon_warrior_1
+
+tags:
+  - Ghidra
+  - beginner
+  - reversing

@@ -1,0 +1,9 @@
+services:
+  lockeddown:
+    build: .
+    container_name: lockeddown
+
+    ports:
+      - "31337:31337"
+
+    restart: unless-stopped

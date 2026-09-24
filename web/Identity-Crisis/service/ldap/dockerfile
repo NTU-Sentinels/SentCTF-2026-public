@@ -1,0 +1,11 @@
+FROM osixia/openldap:latest
+
+COPY bootstrap/ /container/service/slapd/assets/config/bootstrap/ldif/custom/
+
+COPY acl.ldif /opt/bootstrap/acl.ldif
+COPY init.sh /opt/bootstrap/init.sh
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+
+RUN chmod +x /opt/bootstrap/init.sh /docker-entrypoint.sh
+
+ENTRYPOINT ["/docker-entrypoint.sh"]

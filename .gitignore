@@ -1,0 +1,8 @@
+.ctf/
+.data/
+
+# ignore custom Python VENV
+ctfd-venv/
+
+.DS_Store
+

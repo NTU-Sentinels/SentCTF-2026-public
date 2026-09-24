@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Legacy Login</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/legacy_login_style.css') }}">
+  </head>
+  <body>
+    <div tag="Site Header">
+      <h2 tag="Site Title">Sentinel Login</h2>
+    </div>
+    <div class="login-form">
+      <p tag="Login note">Legacy login is still enabled during SSO migration.</p>
+      <p tag="Login note">Please use this instead if you encounter issues with logging in.</p>
+      <form method="post" action="/login">
+        <label tag="Username">Username </label><input name="username" /><br/>
+        <label tag="Password">Password </label><input name="password" type="password" />
+        <button type="submit">Login</button>
+      </form>
+      <a href="/sso/login">Login with SSO</a>
+    </div>
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Moderator Login{% endblock %}
+{% block content %}
+  <section class="panel login-panel">
+    <p class="eyebrow">RESTRICTED AREA</p>
+    <h1>Confessions Moderation Team</h1>
+    <p>Keeping the chat civil while avoiding our own assignments.</p>
+    {% if error %}<p class="message error">{{ error }}</p>{% endif %}
+    {% if notice %}<p class="message success">{{ notice }}</p>{% endif %}
+    <form method="post" class="login-form">
+      <label>Username<input name="username" autocomplete="username" required></label>
+      <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+      <button type="submit">Sign in</button>
+    </form>
+  </section>
+{% endblock %}

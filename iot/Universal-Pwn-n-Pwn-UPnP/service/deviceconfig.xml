@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scpd xmlns="urn:schemas-upnp-org:service-1-0">
+
+    <actionList>
+        <action>
+            <name>GetStatus</name>
+
+            <argumentList>
+                <argument>
+                    <name>Status</name>
+                    <direction>out</direction>
+                    <relatedStateVariable>Status</relatedStateVariable>
+                </argument>
+            </argumentList>
+
+        </action>
+        <action>
+            <name>RunDiagnostic</name>
+
+            <argumentList>
+                <argument>
+                    <name>Target</name>
+                    <direction>in</direction>
+                    <relatedStateVariable>Target</relatedStateVariable>
+                </argument>
+
+                <argument>
+                    <name>Result</name>
+                    <direction>out</direction>
+                    <relatedStateVariable>Result</relatedStateVariable>
+                </argument>
+            </argumentList>
+
+        </action>
+        <action>
+
+            <name>SetMaintenanceMode</name>
+
+            <argumentList>
+                <argument>
+                    <name>Enabled</name>
+                    <direction>in</direction>
+                    <relatedStateVariable>Enabled</relatedStateVariable>
+                </argument>
+
+
+                <argument>
+                    <name>Result</name>
+                    <direction>out</direction>
+                    <relatedStateVariable>Result</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+    </actionList>
+
+    <serviceStateTable>
+
+        <stateVariable sendEvents="no">
+            <name>Status</name>
+
+            <dataType>string</dataType>
+
+        </stateVariable>
+
+        <stateVariable sendEvents="no">
+            <name>Target</name>
+
+            <dataType>string</dataType>
+
+             <allowedValueList>
+                <allowedValue>ping</allowedValue>
+                <allowedValue>dns</allowedValue>
+            </allowedValueList>
+
+        </stateVariable>
+
+        <stateVariable sendEvents="no">
+            <name>Result</name>
+
+            <dataType>string</dataType>
+
+        </stateVariable>
+
+        <stateVariable sendEvents="no">
+            <name>Enabled</name>
+
+            <dataType>boolean</dataType>
+        
+        </stateVariable>
+        
+    </serviceStateTable>
+
+</scpd>

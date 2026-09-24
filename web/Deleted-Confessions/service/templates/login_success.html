@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Signed In{% endblock %}
+{% block content %}
+  <section class="panel narrow">
+    <p class="eyebrow">ACCESS GRANTED</p>
+    <h1>Welcome, {{ username }}</h1>
+    <p>Your moderation session is active.</p>
+    <a class="button-link" href="/moderator-dashboard">Open moderation dashboard</a>
+  </section>
+{% endblock %}

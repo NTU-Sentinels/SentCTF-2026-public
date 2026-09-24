@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+
+    <URLBase>http://127.0.0.1:5000/</URLBase>
+
+    <device>
+        <deviceType>
+            urn:schemas-upnp-org:device:InternetGatewayDevice:1
+        </deviceType>
+
+        <serviceList>
+            <service>
+                <serviceType>
+                    urn:schemas-upnp-org:service:DeviceConfig:1
+                </serviceType>
+
+                <serviceId>
+                    urn:upnp-org:serviceId:DeviceConfig1
+                </serviceId>
+
+                <SCPDURL>
+                    /deviceconfig.xml
+                </SCPDURL>
+
+                <controlURL>
+                    /upnp/control/deviceconfig
+                </controlURL>
+
+                <eventSubURL>
+                    /upnp/event/deviceconfig
+                </eventSubURL>
+            </service>
+        </serviceList>
+    </device>
+
+</root>

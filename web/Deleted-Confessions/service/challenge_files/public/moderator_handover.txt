@@ -1,0 +1,14 @@
+NUT CONFESSIONS MODERATOR HANDOVER
+
+Temporary moderation account:
+
+Username: sleepy.mod
+Password: OneMoreDeadline!
+
+Temporary moderation debug token:
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb25mZXNzaW9uX2lkIjoiY29uZmVzc2lvbi02NzAxIiwidmlzaWJpbGl0eSI6Im1vZGVyYXRvci1vbmx5In0.c2VudGN0Zi1kZWJ1Zy1zaWduYXR1cmU
+
+The migration tool stores review configuration in the token payload.
+
+Remove this before launch.

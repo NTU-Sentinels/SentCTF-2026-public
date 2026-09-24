@@ -1,0 +1,28 @@
+name: Universal Pwn-n-Pwn (UPnP)
+author: Jarrettgxz
+category: IoT
+description: |-
+  Universal Plug and Play (UPnP) is a networking technology commonly found on home devices such as game consoles, printers, smart TVs and routers. It is used to discover devices and open router ports automatically without manual setup. From a consumer point-of-view, this is excellent! But from a security perspective, this is really bad ...
+
+  Remember the PewDiePie hacking situation (Jan 2019) where over 65,000 Gooogle Chromecast and Smart TV devices were remotely controlled to stream videos of PewDiePie? Yea, it was possible due to UPnP misconfigurations which forwarded various ports to the internet.
+
+  In this challenge, you will learn about the basics of UPnP. Your goal will be to discover the hidden SCDP SOAP (POST) endpoint that returns the flag!
+
+  You may refer to the README file, and downloadable cheatsheet respectively, for the Docker setup steps, and a basic introduction to UPnP and related commands.
+
+  Flag format: `sentctf{...}`
+attribution: Jarrettgxz
+value: 300
+
+image: service
+connection_info: sentctf-universal-pwn-n-pwn-upnp.chals.io
+
+flags:
+- sentctf{UPnP_$h0uld_be_disabled}
+
+files:
+- dist/upnp.zip
+
+hints:
+- content: Reverse engineer the `upnpd` binary to discover the undocumented endpoint
+  cost: 25

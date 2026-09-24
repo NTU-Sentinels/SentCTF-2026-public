@@ -1,0 +1,12 @@
+Developer Notes
+
+RSA implementation complete.
+
+Prime generation still needs work.
+
+Since boot speed is important,
+the two generated primes are selected
+from neighbouring search regions.
+
+Need to improve randomness before production.
+

@@ -1,0 +1,29 @@
+{
+    "items": [
+        {
+            "name": "Milo",
+            "description": "Rich and chocolatey malt drink, served smooth and refreshing.",
+            "price": "$2.50"
+        },
+        {
+            "name": "Kopi",
+            "description": "Traditional local coffee brewed with a deep and aromatic flavour.",
+            "price": "$2.20"
+        },
+        {
+            "name": "Honey Lemon",
+            "description": "Refreshing blend of zesty lemon and sweet honey.",
+            "price": "$2.50"
+        },
+        {
+            "name": "Bandung",
+            "description": "Sweet and creamy rose-flavoured milk drink served chilled.",
+            "price": "$2.20"
+        },
+        {
+            "name": "Water",
+            "description": "Simple and refreshing bottled drinking water.",
+            "price": "$0.50"
+        }
+    ]
+}
