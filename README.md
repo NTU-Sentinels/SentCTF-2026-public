@@ -13,7 +13,7 @@ This the publicly shared Github repository for the SentCTF 2026 event hosted by 
 
 ## Setting up local Docker environment
 
-> Run these commands from the same directory as the `Dockerfile` (**service** folder)
+> Run these commands from the same directory as the `Dockerfile` and `docker-compose.yml` files (**service** folder)
 
 ```shell
 docker compose up
