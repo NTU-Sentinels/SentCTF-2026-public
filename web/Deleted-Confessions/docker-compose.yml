@@ -1,0 +1,5 @@
+services:
+  deleted-confessions:
+    build: ./service
+    ports:
+      - "5000:5000"

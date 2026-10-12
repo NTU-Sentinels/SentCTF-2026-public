@@ -1,0 +1,5 @@
+services:
+  hidden-in-plain-sight:
+    build: .
+    ports:
+      - "8000:8000"

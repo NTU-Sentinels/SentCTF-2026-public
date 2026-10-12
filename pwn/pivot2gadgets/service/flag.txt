@@ -1,0 +1,1 @@
+sentctf{st4ck_p1vot_to_g4dg3ts_to_syscall}

@@ -1,0 +1,28 @@
+name: "LEAKED"
+author: "Mujabeast"
+attribution: "Mujabeast"
+category: "Forensics"
+description: |
+  Hours before an upcoming midterm, answers were anonymously circulated online.
+
+  The original post has since been removed, but the academic integrity team recovered one image shared by the leaker.
+
+  The screenshot appears ordinary. However, investigators believe the leaker left a signature tag somewhere inside the original file.
+
+  Identify the tag used by the leaker.
+
+  Flag format: `sentctf{...}`
+
+value: 100
+type: standard
+
+flags:
+  - sentctf{sw4gma5t3r67}
+
+files:
+  - dist/recovered_midterm_leak.jpg
+
+tags:
+  - Metadata
+  - EXIF
+  - base64

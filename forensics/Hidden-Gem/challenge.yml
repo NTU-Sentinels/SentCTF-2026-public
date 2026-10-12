@@ -1,0 +1,30 @@
+name: "Hidden Gem"
+author: "Mujabeast"
+attribution: "Mujabeast"
+category: "Forensics"
+description: |
+  This plate came from a crowded food spot inside NTU's School of Biological Sciences.
+
+  The photo looks ordinary, but there may be more hidden inside it than what is on the plate.
+
+  Find the flag.
+
+  Flag format: `sentctf{...}`
+
+value: 100
+type: standard
+
+flags:
+  - sentctf{why_a1way5_cr0wd3d}
+
+files:
+  - dist/hidden_gem.jpg
+
+hints:
+  - content: "Use steghide."
+    cost: 10
+
+tags:
+  - Steganography
+  - Steghide
+  - OSINT

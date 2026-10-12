@@ -1,0 +1,18 @@
+name: "Smile"
+author: "Mujabeast"
+attribution: "Mujabeast"
+category: "OSINT"
+description: |
+  A princess had suddenly vanished.
+
+  The only trace left behind is a strange audio recording, believed to contain a message from her captor.
+
+  Find out where she has been taken !
+
+    Flag format: `sentctf{xxxx}`
+
+value: 300
+type: standard
+
+flags:
+  - sentctf{y4y_pr1nc3ss_s3cur3d}

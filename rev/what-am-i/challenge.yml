@@ -1,0 +1,31 @@
+name: "What Am I?"
+author: "Mujabeast"
+attribution: "Mujabeast"
+category: "Rev"
+description: |
+  A thin cord, a series of items, or a text value in programming.
+
+  Provided file: `what_am_i`
+
+  Flag format: `sentctf{...}`
+
+value: 100
+type: standard
+
+flags:
+  - sentctf{5tr1ng5_4r3_n0t_53cr3t}
+
+files:
+  - dist/what_am_i
+
+hints:
+  - content: "The program may contain more than what it prints."
+    cost: 0
+  - content: "Look for readable text inside the binary."
+    cost: 0
+  - content: "Try the strings command."
+    cost: 0
+
+tags:
+  - ELF
+  - strings

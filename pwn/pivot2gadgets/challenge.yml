@@ -1,0 +1,44 @@
+name: pivot2Gadgets
+author: Jarrettgxz
+category: Pwn
+description: |-
+  In this hard binary exploitation (pwn) challenge, you are given a partial overflow situation. You have to load relevant values into a controlled memory region, pivot the stack there, find custom gadgets inserted (purposely inserted into the program) to load relevant registers, and finally call the final gadget to achieve remote-code execution (RCE)!
+
+  **Notes**: Look for hidden 'gadget' functions within the binary
+
+  Flag format: `sentctf{...}`
+
+  **2 methods to connect to challenge server**:
+    1. `nc cloud.chals.io 23`
+    - enter "sentctf-pivot2gadgets.chals.io"
+
+    2. Connect via SSL client to: `sentctf-pivot2gadgets.chals.io 443`
+attribution: Jarrettgxz
+value: 500
+
+image: service
+
+flags:
+  - sentctf{st4ck_p1vot_to_g4dg3ts_to_syscall}
+
+files:
+  - dist/pivot2gadgets
+
+tags:
+  - Ghidra
+  - gdb
+  - pwntools
+  - stack pivoting
+  - Return-Oriented Programming (ROP)
+
+hints:
+  - content: >-
+      Read the assembly instructions for the custom gadgets (the decompiled source code
+      may not be helpful)
+    cost: 0
+  - content: It seems that we are only able to overwrite the RBP, and not the RIP
+    cost: 50
+  - content: >-
+      Recall what the 'leave' instruction does. How can we utilize it to control the
+      RSP value, and pivot the stack to call custom gadgets?
+    cost: 100

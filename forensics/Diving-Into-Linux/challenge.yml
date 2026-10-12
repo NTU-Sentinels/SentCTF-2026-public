@@ -1,0 +1,24 @@
+name: "Diving Into Linux"
+author: "Justin"
+attribution: "Justin"
+category: "Forensics"
+description: |
+  Apparently, one of the flags is hidden in this VM and its hard to find it! Are you able to find the flag in this VM?
+
+  **User**: root 
+
+  **Password**: I forgot oops :)
+
+  Hash of OVA (SHA-256): b49effd3d9d684dc3af29598bdb54b6b9f96d147f8e007c628728ac39668dfd6n?
+
+
+  Flag format: `sentctf{...}`
+
+value: 300
+type: standard
+
+flags:
+  - sentctf{cr4rk_th3_b0x}
+
+files:
+  - dist/challenge_VM.zip

@@ -1,0 +1,28 @@
+name: NTU Makans
+author: Jerald
+category: Web
+description: |-
+  There's a new supper stall running in NTU! However, word is going around that they are hiding a dark secret about the ingredients they use. Can you expose the establishment through their store page?
+
+  Flag format: `sentctf{...}`
+attribution: Jerald
+value: 200
+
+image: service
+connection_info: https://sentctf-ntu-makans.chals.io
+
+flags:
+  - sentctf{t1me_t0_cl0s3_sh0p}
+
+tags:
+  - Command Injection
+  - Burpsuite Interceptor
+  - Knowledge of Linux commands
+
+hints:
+  - content: In Linux, how to run more than 1 command at once?
+    cost: 5
+  - content: In Linux, what special characters can be used to match patterns in filenames?
+    cost: 5
+  - content: In Linux, there are multiple ways to read a file.
+    cost: 5

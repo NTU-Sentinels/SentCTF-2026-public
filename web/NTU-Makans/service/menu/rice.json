@@ -1,0 +1,29 @@
+{
+    "items": [
+        {
+            "name": "Chicken Rice",
+            "description": "Fragrant rice served with tender chicken and homemade chilli sauce.",
+            "price": "$4.00"
+        },
+        {
+            "name": "Nasi Lemak",
+            "description": "Coconut rice served with egg, cucumber, ikan bilis and sambal.",
+            "price": "$4.50"
+        },
+        {
+            "name": "Fried Rice",
+            "description": "Wok-fried rice tossed with egg, vegetables and savoury seasoning.",
+            "price": "$4.00"
+        },
+        {
+            "name": "Curry Chicken Rice",
+            "description": "Tender chicken served with aromatic curry and steamed rice.",
+            "price": "$5.00"
+        },
+        {
+            "name": "Beef Fried Rice",
+            "description": "Wok-fried rice with tender beef, egg and fresh vegetables.",
+            "price": "$5.50"
+        }
+    ]
+}

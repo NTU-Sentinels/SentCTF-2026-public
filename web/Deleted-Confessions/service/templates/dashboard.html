@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Moderator Dashboard{% endblock %}
+{% block content %}
+  <section class="page-heading dashboard-heading">
+    <p class="eyebrow">MODERATION DASHBOARD</p>
+    <h1>Welcome, sleepy.mod</h1>
+    <dl class="stats">
+      <div><dt>Role</dt><dd>Junior Moderator</dd></div>
+      <div><dt>Pending reports</dt><dd>47</dd></div>
+      <div><dt>Motivation remaining</dt><dd>3%</dd></div>
+    </dl>
+  </section>
+
+  <section class="report-list" aria-label="Reported confessions">
+    {% for report in reports %}
+      <article class="report">
+        <div>
+          <h2>Confession #{{ report.id.split('-')[1] }}</h2>
+          <p>{{ report.body }}</p>
+        </div>
+        <dl class="report-meta">
+          <div><dt>Reports</dt><dd>{{ report.reports }}</dd></div>
+          <div><dt>Status</dt><dd>Public</dd></div>
+        </dl>
+        <button class="review-button" data-id="{{ report.id }}">Review</button>
+      </article>
+    {% endfor %}
+  </section>
+
+  <section id="response-panel" class="panel response-panel" hidden aria-live="polite">
+    <p class="eyebrow">API RESPONSE</p>
+    <pre id="response-output"></pre>
+  </section>
+
+  <p class="logout-link"><a href="/logout">Sign out</a></p>
+
+  <script>
+    const output = document.getElementById("response-output");
+    const panel = document.getElementById("response-panel");
+    document.querySelectorAll(".review-button").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const response = await fetch("/api/confession/view", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ confession_id: button.dataset.id, visibility: "public" })
+        });
+        const data = await response.json();
+        output.textContent = JSON.stringify(data, null, 2);
+        panel.hidden = false;
+      });
+    });
+  </script>
+{% endblock %}

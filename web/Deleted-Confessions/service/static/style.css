@@ -1,0 +1,87 @@
+:root {
+  --ink: #202124;
+  --muted: #5f6368;
+  --line: #d8dce0;
+  --paper: #ffffff;
+  --ground: #f4f5f6;
+  --accent: #c84b10;
+  --accent-dark: #9d3c0d;
+  --nav: #24282c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--ground);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+a { color: #0a5b94; }
+a:hover { color: var(--accent-dark); }
+
+.container { width: min(920px, calc(100% - 40px)); margin: 0 auto; }
+
+.site-header { background: var(--nav); border-bottom: 4px solid var(--accent); }
+.header-content { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { color: #fff; font-size: 21px; font-weight: 700; text-decoration: none; }
+.brand span { color: #ffad80; }
+nav { display: flex; gap: 20px; }
+nav a { color: #e8eaed; font-size: 14px; text-decoration: none; }
+nav a:hover { color: #fff; }
+
+main { padding: 48px 0 64px; }
+.page-heading { margin-bottom: 28px; }
+.page-heading h1, .panel h1 { margin: 0 0 8px; font-size: 32px; line-height: 1.15; letter-spacing: 0; }
+.page-heading > p:not(.eyebrow), .panel > p { max-width: 660px; margin: 0; color: var(--muted); }
+.eyebrow { margin: 0 0 6px; color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; }
+
+.feed, .report-list { display: grid; gap: 12px; }
+.post, .report, .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 3px; }
+.post { padding: 18px 20px; }
+.post h2, .report h2 { margin: 0 0 5px; font-size: 15px; }
+.post p, .report p { margin: 0; white-space: pre-line; }
+.system-note { margin: 24px 0 0; color: var(--muted); font-size: 14px; }
+
+.panel { padding: 26px; }
+.narrow, .login-panel { max-width: 600px; }
+.archive-list { padding: 0; overflow: hidden; }
+.archive-list a { display: block; padding: 15px 18px; border-bottom: 1px solid var(--line); font-family: Consolas, "Courier New", monospace; text-decoration: none; }
+.archive-list a:last-child { border-bottom: 0; }
+.archive-list a:hover { background: #fff7f3; }
+
+.login-form { display: grid; gap: 16px; margin-top: 24px; }
+.login-form label { display: grid; gap: 6px; font-size: 14px; font-weight: 700; }
+input { width: 100%; padding: 10px; border: 1px solid #aeb4b9; border-radius: 2px; font: inherit; }
+input:focus { outline: 3px solid #f8c4aa; border-color: var(--accent); }
+button, .button-link { display: inline-block; width: fit-content; padding: 10px 15px; border: 1px solid var(--accent-dark); border-radius: 2px; color: #fff; background: var(--accent); font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; }
+button:hover, .button-link:hover { color: #fff; background: var(--accent-dark); }
+.message { margin-top: 18px !important; padding: 10px 12px; border-left: 4px solid; }
+.error { color: #8f1c1c !important; background: #fff2f2; border-color: #b3261e; }
+.success { color: #146c2e !important; background: #effaf2; border-color: #267a3b; }
+
+.stats { display: flex; flex-wrap: wrap; gap: 24px; margin: 20px 0 0; }
+.stats div, .report-meta div { display: grid; gap: 1px; }
+dt { color: var(--muted); font-size: 13px; }
+dd { margin: 0; font-weight: 700; }
+.report { display: grid; grid-template-columns: 1fr auto; gap: 18px 28px; padding: 20px; align-items: end; }
+.report-meta { display: flex; gap: 20px; margin: 0; }
+.review-button { grid-column: 2; }
+.response-panel { margin-top: 24px; }
+.response-panel pre { margin: 0; overflow-x: auto; white-space: pre-wrap; font: 14px/1.5 Consolas, "Courier New", monospace; }
+.logout-link { margin-top: 24px; }
+
+.site-footer { padding: 22px 0; color: #d7dbde; background: var(--nav); font-size: 13px; }
+
+@media (max-width: 600px) {
+  .header-content { min-height: 76px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 4px; }
+  nav { gap: 14px; }
+  main { padding-top: 32px; }
+  .page-heading h1, .panel h1 { font-size: 28px; }
+  .report { grid-template-columns: 1fr; }
+  .review-button { grid-column: 1; }
+}

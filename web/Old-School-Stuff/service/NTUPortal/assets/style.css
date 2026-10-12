@@ -1,0 +1,110 @@
+body{
+    margin:0;
+    padding:0;
+    background:#d6d6d6;
+    font-family:Verdana, Arial, sans-serif;
+    font-size:13px;
+}
+
+#wrapper{
+    width:960px;
+    margin:25px auto;
+    background:white;
+    border:1px solid #777;
+}
+
+#header{
+    background:#003366;
+    color:white;
+    padding:20px;
+}
+
+#header h1{
+    margin:0;
+    font-size:26px;
+}
+
+#header p{
+    margin-top:5px;
+    font-size:12px;
+}
+
+#nav{
+    background:#efefef;
+    border-top:1px solid #999;
+    border-bottom:1px solid #999;
+    padding:10px;
+}
+
+#nav a{
+    color:#003366;
+    text-decoration:none;
+    font-weight:bold;
+    margin-right:20px;
+}
+
+#nav a:hover{
+    text-decoration:underline;
+}
+
+#content{
+    padding:25px;
+    min-height:450px;
+}
+
+.notice{
+    background:#ffffcc;
+    border:1px solid #cccc66;
+    padding:10px;
+    margin-bottom:20px;
+}
+
+.panel{
+    border:1px solid #bbb;
+    margin-bottom:20px;
+}
+
+.panel-header{
+    background:#003366;
+    color:white;
+    padding:8px;
+    font-weight:bold;
+}
+
+.panel-body{
+    padding:15px;
+}
+
+input[type=text],
+input[type=password]{
+    width:300px;
+    padding:6px;
+    border:1px solid #999;
+}
+
+input[type=submit]{
+    padding:6px 18px;
+}
+
+table{
+    border-collapse:collapse;
+    width:100%;
+}
+
+th{
+    background:#003366;
+    color:white;
+}
+
+th,td{
+    border:1px solid #aaa;
+    padding:8px;
+}
+
+.footer{
+    text-align:center;
+    background:#efefef;
+    padding:15px;
+    font-size:11px;
+    border-top:1px solid #999;
+}

@@ -1,0 +1,26 @@
+name: "Dragon Warrior 2"
+author: "Mujabeast"
+attribution: "Mujabeast"
+category: "Rev"
+description: |
+  There is no secret ingredient.
+
+  The Jade Palace has sealed the Dragon Scroll behind a warrior check. The answer is not written plainly, but the program already knows what it is looking for.
+
+  Provided file: `dragon_warrior_2`
+
+  Flag format: `sentctf{...}`
+value: 100
+type: standard
+state: hidden
+
+flags:
+  - sentctf{n0_s3cr3t_1ngr3d13nt}
+
+files:
+  - dist/dragon_warrior_2
+
+tags:
+  - Ghidra
+  - reversing
+  - xor

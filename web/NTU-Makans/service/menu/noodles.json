@@ -1,0 +1,29 @@
+{
+    "items": [
+        {
+            "name": "Wanton Noodles",
+            "description": "Springy noodles topped with savoury wantons and greens.",
+            "price": "$4.50"
+        },
+        {
+            "name": "Fishball Noodles",
+            "description": "Noodles served with bouncy fishballs and fresh vegetables.",
+            "price": "$4.00"
+        },
+        {
+            "name": "Chicken Noodles",
+            "description": "Tender sliced chicken served with noodles in a light broth.",
+            "price": "$4.50"
+        },
+        {
+            "name": "Mee Goreng",
+            "description": "Stir-fried noodles tossed with egg, vegetables and a savoury sauce.",
+            "price": "$4.20"
+        },
+        {
+            "name": "Beef Noodles",
+            "description": "Tender beef slices served with noodles in a rich, savoury broth.",
+            "price": "$5.50"
+        }
+    ]
+}

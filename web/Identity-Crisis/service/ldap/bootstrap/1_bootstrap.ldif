@@ -1,0 +1,103 @@
+dn: ou=People,dc=NTU,dc=Sentinels
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+dn: uid=admin,ou=People,dc=NTU,dc=Sentinels
+objectClass: inetOrgPerson
+uid: admin
+sn: Admin
+cn: Johnathan
+userPassword: R9Fa48@v2Dn9Lp2#MV2@y23@fv5gKnD90fdw
+mail: admin@sentinel.ctf
+employeeNumber: A0001
+employeeType: Admin
+title: IT Admin
+
+dn: uid=sentinelstaff01,ou=People,dc=NTU,dc=Sentinels
+objectClass: inetOrgPerson
+uid: sentinelstaff01
+sn: Sentinel
+cn: John
+userPassword: S3ntCTF@NTU!
+mail: johnsentinel@sentinel.ctf
+employeeNumber: E2077
+employeeType: Staff
+title: Junior Developer
+
+dn: uid=sentinelstaff02,ou=People,dc=NTU,dc=Sentinels
+objectClass: inetOrgPerson
+uid: sentinelstaff02
+sn: Sentinel
+cn: David
+userPassword: qv4E2v4@b62@NTU!
+mail: davidsentinel@sentinel.ctf
+employeeNumber: E2027
+employeeType: Staff
+title: Lead Frontend Developer
+
+dn: uid=sentinelstaff03,ou=People,dc=NTU,dc=Sentinels
+objectClass: inetOrgPerson
+uid: sentinelstaff03
+sn: Sentinel
+cn: Harry 
+userPassword: S3n4@b62@Feee@4@b2dd62@U!
+mail: harrysentinel@sentinel.ctf
+employeeNumber: Ld4p_1nj3C+
+employeeType: Staff
+title: Lead Backend Engineer
+
+dn: uid=sentinelstaff04,ou=People,dc=NTU,dc=Sentinels
+objectClass: inetOrgPerson
+uid: sentinelstaff04
+sn: Sentinel
+cn: Alicia
+userPassword: 2wnk3rbZ67uwe4PMuU@NTU04!
+mail: aliciasentinel@sentinel.ctf
+employeeNumber: E3141
+employeeType: Staff
+title: Security Analyst
+
+dn: uid=sentinelstaff05,ou=People,dc=NTU,dc=Sentinels
+objectClass: inetOrgPerson
+uid: sentinelstaff05
+sn: Sentinel
+cn: Brian
+userPassword: 96mamEa4jZ7gSeHdzt@NTU05!
+mail: briansentinel@sentinel.ctf
+employeeNumber: E2718
+employeeType: Staff
+title: Platform Engineer
+
+dn: uid=sentinelstaff06,ou=People,dc=NTU,dc=Sentinels
+objectClass: inetOrgPerson
+uid: sentinelstaff06
+sn: Sentinel
+cn: Clara
+userPassword: TPGEPggwtayj4dfL7s@NTU06!
+mail: clarasentinel@sentinel.ctf
+employeeNumber: E1618
+employeeType: Staff
+title: QA Engineer
+
+dn: uid=sentinelstaff07,ou=People,dc=NTU,dc=Sentinels
+objectClass: inetOrgPerson
+uid: sentinelstaff07
+sn: Sentinel
+cn: Daniel
+userPassword: DGKwQdPwB4Y997KePd@NTU07!
+mail: danielsentinel@sentinel.ctf
+employeeNumber: E1414
+employeeType: Staff
+title: DevOps Engineer
+
+dn: uid=sentinelstaff08,ou=People,dc=NTU,dc=Sentinels
+objectClass: inetOrgPerson
+uid: sentinelstaff08
+sn: Sentinel
+cn: Elaine
+userPassword: b5GQjdfUkfHQ7wtaxF@NTU08!
+mail: elainesentinel@sentinel.ctf
+employeeNumber: E1732
+employeeType: Staff
+title: Product Designer

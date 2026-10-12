@@ -1,0 +1,35 @@
+name: "Raspberry Pi Sudoers"
+author: "Jarrettgxz"
+attribution: "Jarrettgxz"
+category: "Misc"
+description: |
+
+  In this mission room challenge, you are provided with a VM image from a Raspberry Pi machine. Your goal will be to access a shell using default SSH credentials. This usernamd & password combination will be the same for the provided target VM and physical device).
+
+  Your task is to perform enumeration on the target VM, to perform privilege escalation to call a Python script (as the root user) to blink some lights.
+
+  After you have successfully tested it on the VM, create a ticket to confirm the mission room location.
+
+  After you have received a confirmation, head over to the physical room to test it on the physical Raspberry Pi machine to retrieve the flag!
+
+  You may download the target Raspberry Pi VM image here: https://drive.google.com/uc?export=download&id=127jnAUoOvFFPBZrPXEeo4ZozWhblGCVX 
+
+  Refer to the README.md file to understand how to set it up
+
+  Flag format: `sentctf{XXXX}`
+
+value: 300
+
+files:
+  - dist/README.md
+
+flags:
+  - sentctf{raspi_firew0rk$}
+
+tags:
+  - raspberry pi
+  - privilege escalation (sudoers)
+
+hints:
+  - content: sudo -l
+    cost: 50

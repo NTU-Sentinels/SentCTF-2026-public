@@ -1,0 +1,34 @@
+name: "The Handover"
+author: "Rushaidy"
+attribution: "Rushaidy"
+category: "Forensics"
+description: |
+  NTU's Cyber Security Office intercepted an encrypted forensic image recovered from the laptop of a researcher suspected of leaking confidential project data. Hidden within are several encrypted and encoded files containing the details of an upcoming rendezvous.
+  Your task is to analyze the evidence and uncover the meeting location, date, and time before the data exchange takes place.
+
+  Flag format: `sentctf{...}`
+
+  **Note**: The flag is the meeting location, date, and time in the format: `sentctf{location_date_time}`
+
+value: 300
+type: standard
+
+flags:
+  - sentctf{pulau_satumu_07022026_0000hrs}
+
+files:
+  - dist/CSONTU.ad1
+
+tags:
+  - AD1 forensic image analysis
+  - QR code investigation
+  - Open-source intelligence (OSINT)
+  - Hieroglyph deciphering
+  - Password cracking using clues
+  - Pigpen cipher
+  - Image metadata analysis
+  - ROT18 decoding
+  - Caesar cipher
+  - Morse code
+  - Audio steganography (Steghide)
+  - Spectrogram analysis

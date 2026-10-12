@@ -1,0 +1,35 @@
+name: Hidden In Plain Sight
+author: Jeral
+category: Web
+description: |-
+  An old NTU staff portal exposes a recovery email address and a raw MD5
+  password digest in its client-side JavaScript. Players inspect the page source,
+  crack the digest offline, enter the recovered credentials, and retrieve the
+  flag.
+
+  This is an intentionally vulnerable CTF code. A fast, unsalted MD5 digest
+  must not be used for storing real passwords.
+
+  Flag format: `sentctf{...}`
+
+attribution: Jeral
+value: 200
+
+image: service
+connection_info: https://sentctf-hidden-in-plain-sight.chals.io
+
+flags:
+  - sentctf{source_before_force}
+
+files:
+  - dist/hips_wordlist.txt
+
+hints:
+  - content: Inspect the page source for clues.
+    cost: 25
+  - content: Search online regarding password cracker that digest MD5 algorithms.
+    cost: 25
+
+tags:
+  - Source code analysis
+  - Password cracking

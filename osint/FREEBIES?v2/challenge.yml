@@ -1,0 +1,18 @@
+name: "FREEBIES?"
+author: "Sandra"
+attribution: "Sandra"
+category: "OSINT"
+description: |
+  ( SNACKS WILL BE PROVIDED FOR THIS CHALLENGE, FIRST COME FIRST SERVE) 
+
+  Do you hear that?? I think it is Heroes Tonight by Janji!!
+  Can you find the hidden mission room from our publicity video?
+
+  Please open a ticket to confirm location before going!
+
+type: dynamic
+value: 0
+extra:
+  initial: 0
+  decay: 0
+  minimum: 0

@@ -1,0 +1,23 @@
+name: "Picture Perfect"
+author: "Justin"
+attribution: "Justin"
+category: "Forensics"
+description: |
+  Oh no, this picture is corrupted! Can you restore it and find the flag inside the picture?
+
+  Flag format: `sentctf{...}`
+
+value: 200
+type: standard
+
+flags:
+  - sentctf{picture_hidden_1n_rGb_channels}
+
+files:
+  - dist/scenery.dat
+
+hints:
+  - content: Maybe check the file header
+    cost: 20
+  - content: Look carefully, is there a way to manipulate such that you can see it clearer?
+    cost: 30

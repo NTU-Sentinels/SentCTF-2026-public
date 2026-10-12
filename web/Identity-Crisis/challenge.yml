@@ -1,0 +1,42 @@
+name: Identity Crisis
+author: So Cheuk Hong
+category: Web
+description: |-
+  Thanks to the combined efforts of the participants, NTU Staff have since upgraded their authentication system by following the feedback, incorporating SSO into their login flow and moving away from LDAP server for authentication.
+  Confident, they now task you with another security assessment of their webpage.
+  Giving you the following credentials for testing.
+
+  - user: sentinelstaff01
+  - password: S3ntCTF@NTU!
+
+  However, you have a feeling that it isn't as secure as they make it out to be…
+
+  **Task**:
+  Find and piece together the flag in this format: `sentctf{A_B}`
+
+  - A. Note the employee number of the third staff account created
+  - B. Login as the admin through their new login page.
+attribution: So Cheuk Hong
+value: 300
+
+image: service
+connection_info: https://sentctf-identity-crisis.chals.io
+
+flags:
+  - sentctf{Ld4p_1nj3C+_S4ML_S1gn4+ure3_Byp4ss3d}
+
+hints:
+  - content: (LDAP) Is there a way to retrieve a specific username from an ldap server?
+    cost: 25
+  - content: (LDAP) What are applicable syntaxes for an ldap filter?
+    cost: 25
+  - content: (SAML) How does a user send information back to the IDP?
+    cost: 25
+  - content:
+      (SAML) How does an IDP verify the user credentials before authenticating
+      them?
+    cost: 25
+
+tags:
+  - LDAP
+  - SSO

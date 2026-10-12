@@ -1,0 +1,13 @@
+name: "FREEBIES??"
+author: "Rushaidy"
+attribution: "Rushaidy"
+category: "OSINT"
+description: |
+  Welcome to SentCTF, Your first lead is waiting for you right at the front door. Sometimes, uncovering the truth requires making the right selection.
+
+type: dynamic
+value: 0
+extra:
+  initial: 0
+  decay: 0
+  minimum: 0

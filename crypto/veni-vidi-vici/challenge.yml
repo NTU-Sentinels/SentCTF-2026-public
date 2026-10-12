@@ -1,0 +1,21 @@
+name: "Veni, vidi, vici"
+author: "Mujabeast"
+attribution: "Mujabeast"
+category: "Crypto"
+description: |
+  We intercepted a suspicious message.
+
+  We don't know what they're planning, but this was all we managed to recover:
+
+  INTERCEPTED MESSAGE: Chop 3 cups of romaine lettuce into bite-sized pieces. Add croutons and 3 tablespoons of grated parmesan. Mix mayonnaise, 3 cloves of garlic, lemon juice, mustard and Worcestershire sauce. Pour the dressing over the lettuce. Toss until evenly coated. Season with salt and pepper. Serve immediately.
+
+  vhqwfwi{l_oryh_fdhvdu_vdodgv}
+
+  Whatever this means, figure it out.
+
+value: 100
+type: standard
+state: hidden
+
+flags:
+  - sentctf{i_love_caesar_salads}

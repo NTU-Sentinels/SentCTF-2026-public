@@ -1,0 +1,43 @@
+name: TheMoon
+category: IoT (Internet-of-Things)
+author: Jarrettgxz
+description: |
+  In this mission room challenge, you have gained access to a firmware file from the **Linksys E1200 router**. Extract the filesystem, investigate the files, reverse engineer the vulnerable web binary to find the unauthenticated **command injection** vulnerability within, craft an exploit to achieve RCE and a shell.
+
+  When you are ready with your exploit, create a ticket to confirm the mission room location.
+
+  After you have received a confirmation, head over to the physical room to test it on the physical router to retrieve the flag! (Router IP: `192.168.1.1`)
+
+  **NOTE**: you can test your exploit locally using firmware emulation (refer to the notes in the downloadable cheatsheet)
+
+  Provided materials:
+  - Setup steps (`README.md`)
+  - Firmware file from the router device (`linksys_e1200.bin`)
+  - Commands cheatsheet (`cheatsheet.pdf`)
+
+  Flag format: `sentctf{...}`
+
+  Fun fact: This router model contains real-world vulnerabilities, and have been used in an actual botnet campaign named "TheMoon".
+
+attribution: Jarrettgxz
+value: 500
+
+flags:
+  - sentctf{th3_m0on_botn4t}
+
+files:
+  - dist/info.zip
+
+tags:
+  - firmware reversing & analysis
+  - binary reversing & source code analysis
+  - firmware emulation
+  - vulnerability research
+  - CVE
+  - exploit development
+
+hints:
+  - content: Perhaps there is an existing exploit script for some CVE that exist on this router?
+    cost: 100
+  - content: Perhaps there is an alternative CVE present on this router that doesn't require modification of any existing exploits?
+    cost: 100
